@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="webstyle.css">
+<link rel="stylesheet" href="shopcstyle.css">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+    
+
+  <style>
+    .cart-section {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 40px;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 40px;
+      background-color: #fff;
+      border-radius: 30px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .container, .cart {
+      flex: 1;
+    }
+
+    .heading {
+      font-family: 'Fredoka', sans-serif;
+      font-size: 28px;
+      color: #004ead;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .cart {
+      padding: 20px;
+      border: 2px solid #004ead;
+      border-radius: 20px;
+      background-color: #fdf9ec;
+    }
+
+    .cart-header,
+    .cart-footer {
+      display: flex;
+      justify-content: space-between;
+      font-family: 'Fredoka', sans-serif;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .buy-btn {
+      background-color: #ffd84d;
+      color: #333;
+      width: 100%;
+      padding: 15px;
+      font-size: 1rem;
+      border-radius: 12px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .buy-btn:hover {
+      background-color: #fbcc24;
+    }
+
+    h1 {
+      font-family: 'Fredoka', sans-serif;
+      font-size: 48px;
+      color: #004ead;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    @media screen and (max-width: 850px) {
+      .cart-section {
+        flex-direction: column;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="logo-removebg-preview.png" alt="Logo" class="logo" />
+    <nav>
+      <a href="homepage.html">Home</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="shop.html">Products</a>
+      <a href="shoppingCart.html">Shopping Cart</a>
+      <a href="policy.html">Policy</a>
+    </nav>
+    <a href="user.html"><img src="usericon.png" alt="User Icon" class="profile-icon" /></a>
+  </header>
+
+  <!-- Page Title -->
+  <h1>Your Shopping Cart</h1>
+
+  <!-- Main Cart Section -->
+  <section class="cart-section">
+    <div class="container">
+      <h3 class="heading">Selected Products</h3>
+      <div class="cart-items"></div>
+    </div>
+
+    <div class="cart">
+      <div class="cart-header">
+        <h4>Cart</h4>
+        <p class="noOfItems">0 items</p>
+      </div>
+      <hr />
+      <div class="cart-footer">
+        <h4>Total</h4>
+        <p class="total">RM 0.00</p>
+      </div>
+      <button class="buy-btn">PROCEED TO BUY</button>
+    </div>
+  </section>
+
+  <script src="shopcjs.js"></script>
+
+  <!-- Footer -->
+  <footer>
+    <img src="logo-removebg-preview.png" alt="Footer Logo" />
+    <nav>
+      <a href="homepage.html">Home</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="shop.html">Products</a>
+      <a href="shoppingCart.html">Shopping Cart</a>
+      <a href="policy.html">Policy</a>
+    </nav>
+    <p><strong>Store Hours</strong><br>Mon-Fri: 8 AM - 10 PM<br>Sat-Sun: 12 PM - 10 PM</p>
+    <p>📞 +6011-662-3385</p>
+    <p>
+      <a href="https://www.facebook.com/profile.php?id=61576205892308" target="_blank" style="color:white;">Facebook</a> | Whatsapp
+    </p>
+  </footer>
+
+</body>
+</html>
+

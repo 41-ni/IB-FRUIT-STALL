@@ -1,0 +1,712 @@
+body {
+    margin: 0;
+    background-color: #f1ead1;
+    font-family: 'Fredoka', sans-serif;
+}
+
+header {
+    background-color: #004ead;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+}
+
+.logo {
+    height: 80px;
+}
+
+nav {
+    flex: 1;
+    text-align: center;
+}
+
+nav a {
+    font-family: 'Fredoka', sans-serif;
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.profile-icon {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.main-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 60px 80px;
+    gap: 40px;
+    border-radius: 0 0 40px 40px;
+}
+
+.tagline-container {
+    flex: 1;
+}
+
+.tagline {
+    font-family: 'Baloo 2', cursive;
+    font-size: 84px;
+    font-weight: 900;
+    color: #004ead;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.description {
+    font-size: 22px;
+    line-height: 1.7;
+    color: #333;
+}
+
+.poster {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 40px;
+}
+
+.poster img {
+    height: 420px;
+    width: auto;
+    max-width: 100%;
+    border-radius: 20px;
+}
+
+.slideshow-title {
+    text-align: center;
+    font-family: 'Baloo 2', cursive;
+    font-size: 36px;
+    margin: 60px 0 20px 0;
+    color: #004ead;
+}
+
+.slideshow-container {
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto 60px auto;
+    width: 90%;
+    max-width: 1000px;
+    color: #097d4c;
+}
+
+.slideshow-track {
+    display: flex;
+    animation: scroll 25s linear infinite;
+    gap: 20px;
+    color: #097d4c;
+}
+
+.slideshow-track img {
+    height: 180px;
+    border-radius: 10px;
+    color: #097d4c;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+.category-title {
+    text-align: center;
+    font-family: 'Baloo 2', cursive;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #004ead;
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.category {
+    text-align: center;
+    border: 2px solid #004ead;
+    border-radius: 20px;
+    padding: 20px;
+    width: 150px;
+}
+
+.category img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.category p {
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+#reviews {
+    padding: 60px 40px 40px 40px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#reviews h2 {
+    font-family: 'Baloo 2', cursive;
+    font-size: 32px;
+    color: #004ead;
+}
+
+#reviews p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.testimonial-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 60px;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    background-color: #f1ead1;
+    padding: 20px;
+    border-radius: 10px;
+    width: 280px;
+}
+
+.testimonial img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.testimonial-username {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.testimonial-rating {
+    color: gold;
+}
+
+footer {
+    background-color: #004ead;
+    text-align: center;
+    padding: 40px 20px;
+    color: white;
+}
+
+footer img {
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+footer nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* About Us Page Styles */
+
+.highlight-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 80px;
+  gap: 30px;
+  background-color: white;
+}
+
+.highlight-text h1 {
+  font-family: 'Baloo 2', cursive;
+  font-size: 60px;
+  color: #004ead;
+  margin-bottom: 15px;
+}
+
+.highlight-text p {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 22px;
+  font-style: italic;
+  color: #0a3174;
+}
+
+.highlight-image img {
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 74, 173, 0.2);
+}
+
+.info-section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: 'Fredoka', sans-serif;
+  color: #333;
+}
+
+.info-section h2 {
+  font-family: 'Baloo 2', cursive;
+  font-size: 36px;
+  color: #004ead;
+  margin-bottom: 12px;
+  border-bottom: 3px solid #004ead;
+  padding-bottom: 6px;
+}
+
+.info-section p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.testimonials-section {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.testimonials-section h2 {
+  font-family: 'Baloo 2', cursive;
+  font-size: 36px;
+  color: #004ead;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.testimonial-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.testimonial {
+  flex: 1 1 280px;
+  background-color: #e8f0fe;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  font-family: 'Fredoka', sans-serif;
+  color: #223355;
+}
+
+.testimonial img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 12px;
+  object-fit: cover;
+  border: 3px solid #004ead;
+}
+
+.testimonial .rating {
+  font-size: 18px;
+  color: #f5a623;
+  margin-bottom: 10px;
+}
+
+.map-container {
+  max-width: 600px;
+  margin: 25px auto;
+  text-align: center;
+}
+
+.map-container img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 74, 173, 0.3);
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 40px auto 80px;
+  padding: 20px;
+  background-color: #f4f9ff;
+  border-radius: 14px;
+  box-shadow: 0 0 15px rgba(0, 74, 173, 0.2);
+  text-align: center;
+}
+
+.contact-form h2 {
+  font-family: 'Baloo 2', cursive;
+  font-size: 28px;
+  color: #004ead;
+  margin-bottom: 15px;
+}
+
+.contact-form input[type="text"] {
+  width: 80%;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 2px solid #004ead;
+  margin-bottom: 15px;
+  font-family: 'Fredoka', sans-serif;
+}
+
+.contact-form button {
+  background-color: #004ead;
+  color: white;
+  font-family: 'Baloo 2', cursive;
+  font-size: 20px;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #002f6c;
+}
+
+.org-chart-section {
+  text-align: center;
+  margin: 60px 0;
+}
+
+.org-chart-section h2 {
+  font-size: 2rem;
+  color: #2a7a2a;
+  margin-bottom: 30px;
+}
+
+.org-chart-img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.visit-store-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.store-address {
+  flex: 1 1 300px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.store-image {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.store-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.map-container img {
+  width: 80%;
+  max-width: 500px;
+  height: auto;
+  margin-top: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.policy-main {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px 60px;
+  font-family: 'Fredoka', sans-serif;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 78, 173, 0.1);
+}
+
+.policy-section {
+  margin-bottom: 40px;
+}
+
+.policy-section h1 {
+  font-family: 'Baloo 2', cursive;
+  font-size: 36px;
+  color: #004ead;
+  margin-bottom: 12px;
+  border-bottom: 3px solid #004ead;
+  padding-bottom: 6px;
+}
+
+.policy-section p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* User page specific styles */
+
+.user-main {
+    max-width: 900px;
+    margin: 60px auto 80px;
+    padding: 20px;
+    font-family: 'Fredoka', sans-serif;
+    color: #333;
+}
+
+.user-info {
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 74, 173, 0.1);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.user-info h1 {
+    font-family: 'Baloo 2', cursive;
+    font-size: 48px;
+    color: #004ead;
+    margin-bottom: 10px;
+}
+
+.user-info p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.order-history {
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 74, 173, 0.1);
+    margin-bottom: 50px;
+}
+
+.order-history h2 {
+    font-family: 'Baloo 2', cursive;
+    font-size: 36px;
+    color: #004ead;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #004ead;
+    padding-bottom: 6px;
+}
+
+.order-history table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.order-history th, .order-history td {
+    border: 1px solid #ccc;
+    padding: 12px 15px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.order-history th {
+    background-color: #004ead;
+    color: white;
+}
+
+.account-settings {
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 74, 173, 0.1);
+}
+
+.account-settings h2 {
+    font-family: 'Baloo 2', cursive;
+    font-size: 36px;
+    color: #004ead;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #004ead;
+    padding-bottom: 6px;
+}
+
+.account-settings form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.account-settings label {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.account-settings input[type="text"],
+.account-settings input[type="email"],
+.account-settings input[type="password"] {
+    padding: 12px 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid #004ead;
+    font-family: 'Fredoka', sans-serif;
+}
+
+.account-settings button {
+    background-color: #004ead;
+    color: white;
+    font-family: 'Baloo 2', cursive;
+    font-size: 20px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.account-settings button:hover {
+    background-color: #002f6c;
+}
+
+.subscription-plans {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    margin: 60px auto;
+    border-radius: 20px;
+    max-width: 1000px;
+    box-shadow: 0 0 20px rgba(0, 74, 173, 0.1);
+}
+
+.subscription-plans h2 {
+    text-align: center;
+    font-family: 'Baloo 2', cursive;
+    font-size: 40px;
+    color: #004ead;
+    margin-bottom: 30px;
+}
+
+.plans-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.plan {
+    background-color: white;
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 0 12px rgba(0, 74, 173, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 74, 173, 0.2);
+}
+
+.plan h3 {
+    font-family: 'Baloo 2', cursive;
+    font-size: 28px;
+    color: #004ead;
+    margin-bottom: 10px;
+}
+
+.plan p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.plan ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.plan ul li {
+    margin-bottom: 10px;
+}
+
+.plan button {
+    background-color: #004ead;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: 'Baloo 2', cursive;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.plan button:hover {
+    background-color: #00357a;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 100px;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: auto;
+    padding: 30px;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 400px;
+    font-family: 'Baloo 2', cursive;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: black;
+}
+
+#subscription-form input, #subscription-form select, #subscription-form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-family: 'Baloo 2', cursive;
+}
+
+#subscription-form button {
+    background-color: #004ead;
+    color: white;
+    border: none;
+    margin-top: 16px;
+    cursor: pointer;
+}
+

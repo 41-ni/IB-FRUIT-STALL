@@ -1,0 +1,310 @@
+/* Reset and base styles */
+body {
+            margin: 0;
+            background-color: #f1ead1;
+            font-family: 'Fredoka', sans-serif;
+        }
+
+header {
+            background-color: #004ead;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 40px;
+             font-family: 'Fredoka', sans-serif;
+        }
+
+.logo {
+    height: 80px;
+}
+
+nav {
+    flex: 1;
+    text-align: center;
+}
+
+nav a {
+    font-family: 'Fredoka', sans-serif;
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.profile-icon {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Container for main content */
+.shop-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+/* Heading and cart link row */
+.header-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Baloo 2', cursive;
+    font-size: 36px;
+}
+
+.header-row h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #004ead;
+    text-align: center;
+}
+
+/* View Cart button */
+.cart-link {
+  position: fixed;       /* Fix to viewport */
+  bottom: 20px;          /* Distance from bottom */
+  right: 20px;           /* Distance from right */
+  background-color: #007bff;
+  color: white;
+  padding: 12px 22px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease;
+  z-index: 1000;         /* Keep button on top */
+
+}
+
+.cart-link:hover {
+  background-color: #0056b3;
+}
+
+
+/* Category filter buttons */
+.category-filters {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.category-button {
+    padding: 10px 20px;
+    margin: 0 7px;
+    border: none;
+    border-radius: 25px;
+    background-color: #004ead;
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    user-select: none;
+     font-family: 'Baloo 2', cursive;
+            font-size: 20px;
+}
+
+.category-button:hover,
+.category-button.active {
+    background-color: #edcc27;
+}
+
+/* Products grid */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 25px;
+}
+
+/* Individual product cards */
+.product {
+    background: white;
+    border-radius: 12px;
+    border: 2px solid #004ead;
+    padding: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.07);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+
+.product:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.product img {
+  width: 100%;           /* Make image take full width of container */
+  height: 180px;         /* Fixed height to keep uniformity */
+  object-fit: cover;     /* Crop and scale image to fill without distortion */
+  border-radius: 12px;   /* Optional: rounded corners */
+  display: block;        /* Remove inline gaps */
+}
+
+.product h3 {
+    margin: 0 0 10px;
+    font-size: 1.4rem;
+    color: #004ead;
+    font-family: 'Baloo 2', cursive;
+}
+
+.product p {
+    margin: 0 0 15px;
+    font-weight: 700;
+    color: #007bff;
+    font-size: 1.1rem;
+}
+
+/* Add to Cart button */
+.add-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    user-select: none;
+    font-family: 'Baloo 2', cursive;
+}
+
+.add-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Footer styles */
+footer {
+    background-color: #004ead;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 60px;
+    font-size: 1rem;
+}
+
+footer img {
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+footer nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+footer nav a:hover {
+    color: #ffd84d;
+}
+
+footer p {
+    margin-top: 10px;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 600px; /* Max width for larger screens */
+}
+
+.modal-content img {
+    width: 100%;           /* Make image take full width of modal */
+    height: auto;          /* Maintain aspect ratio */
+    max-height: 400px;     /* Set a maximum height to prevent overflow */
+    object-fit: contain;    /* Scale image to fit within the given dimensions */
+    border-radius: 12px;   /* Optional: rounded corners */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.size-selection {
+    margin: 10px 0;
+}
+
+.size-btn {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.size-btn.selected {
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #0056b3;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header-row {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    nav {
+        font-size: 14px;
+    }
+
+    .products {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 20px;
+    }
+
+    .product img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav a {
+        margin: 0 8px;
+    }
+
+    .category-button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}

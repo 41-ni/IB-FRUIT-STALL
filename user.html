@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>User Dashboard - IB Fruits</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Fredoka&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="webstyle.css" />
+</head>
+<body>
+    <header>
+    <img src="logo-removebg-preview.png" alt="Logo" class="logo">
+    <nav>
+        <a href="homepage.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="shop.html">Products</a>
+        <a href="shoppingCart.html">Shopping Cart</a>
+        <a href="policy.html">Policy</a>
+    </nav>
+    <a href="user.html"><img src="usericon.png" alt="User Icon" class="profile-icon"></a>
+</header>
+
+    <main class="user-main">
+        <section class="user-info">
+            <h1>Welcome, Ain Mahathir!</h1>
+            <p>Email: ain101@gmail.com</p>
+            <p>Member since: May 2025</p>
+        </section>
+
+        <section class="order-history">
+            <h2>Your Orders</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#1001</td>
+                        <td>2025-05-10</td>
+                        <td>Delivered</td>
+                        <td>RM 45.00</td>
+                    </tr>
+                    <tr>
+                        <td>#1002</td>
+                        <td>2025-05-15</td>
+                        <td>Shipped</td>
+                        <td>RM 30.50</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="account-settings">
+            <h2>Account Settings</h2>
+            <form>
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" value="Jane Doe" />
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" value="jane.doe@example.com" />
+
+                <label for="password">Change Password</label>
+                <input type="password" id="password" name="password" placeholder="New password" />
+
+                <button type="submit">Save Changes</button>
+            </form>
+        </section>
+
+        <section class="subscription-plans">
+    <h2>Monthly Subscription Plans</h2>
+    <div class="plans-container">
+        <div class="plan basic">
+            <h3>Basic Plan</h3>
+            <p><strong>RM 29/month</strong></p>
+            <ul>
+                <li>2 fruits of your choice</li>
+                <li>Delivered every <strong>Tuesday morning</strong></li>
+                <li>Standard delivery rates apply</li>
+            </ul>
+            <button>Subscribe</button>
+        </div>
+
+        <div class="plan plus">
+            <h3>Plus Plan</h3>
+            <p><strong>RM 39/month</strong></p>
+            <ul>
+                <li>2 fruits + 1 juice of your choice</li>
+                <li>Delivered every <strong>Tuesday & Thursday</strong></li>
+                <li>Standard delivery rates apply</li>
+            </ul>
+            <button>Subscribe</button>
+        </div>
+
+        <div class="plan premium">
+            <h3>Premium Plan</h3>
+            <p><strong>RM 49/month</strong></p>
+            <ul>
+                <li>2 fruits + 1 juice of your choice + free delivery</li>
+                <li>Delivered every <strong>Tuesday & Thursday</strong></li>
+                <li><strong>Free delivery</strong></li>
+                <li>Priority support</li>
+            </ul>
+            <button>Subscribe</button>
+        </div>
+    </div>
+</section>
+    </main>
+
+    <footer>
+    <img src="logo-removebg-preview.png" alt="Footer Logo">
+    <nav>
+        <a href="homepage.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="shop.html">Products</a>
+        <a href="shoppingCart.html">Shopping Cart</a>
+        <a href="policy.html">Policy</a>
+    </nav>
+    <p><strong>Store Hours</strong><br>Mon-Fri: 8 AM - 10 PM<br>Sat-Sun: 12 PM - 10 PM</p>
+    <p>📞 +6011-662-3385</p>
+    <p><a href="https://www.facebook.com/profile.php?id=61576205892308" target="_blank" style="color:white;">Facebook</a> | Whatsapp</p>
+</footer>
+<div id="subscription-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h3>Subscribe Now</h3>
+    <form id="subscription-form">
+      <label for="plan">Select Plan:</label>
+      <select id="plan" name="plan">
+        <option value="basic">Basic (RM 29/month)</option>
+        <option value="plus">Plus (RM 49/month)</option>
+        <option value="premium">Premium (RM 69/month)</option>
+      </select><br><br>
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <button type="submit">Confirm Subscription</button>
+    </form>
+  </div>
+</div>
+<script>
+    const modal = document.getElementById("subscription-modal");
+    const buttons = document.querySelectorAll(".plan button");
+    const closeBtn = document.querySelector(".close-btn");
+
+    buttons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            modal.style.display = "block";
+        });
+    });
+
+    closeBtn.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    document.getElementById("subscription-form").addEventListener("submit", function(e) {
+        e.preventDefault();
+        alert("Thank you for subscribing!");
+        modal.style.display = "none";
+        
+    });
+</script>
+</body>
+</html>
